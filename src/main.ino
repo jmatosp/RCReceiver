@@ -19,6 +19,7 @@ void rising() {
 void falling() {
     time[0] = Timer1.read();   // read the time since timer1 was restarted
     Timer1.stop();
+    enableInterrupt(ARDUINOPIN, rising, RISING);
 }
 
 void setup() {
